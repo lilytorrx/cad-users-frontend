@@ -16,7 +16,7 @@ function App() {
   const count = users.length
 
   useEffect(() => {
-    fetch("https://cad-users-backend.up.railway.app/usuarios")
+    fetch("https://cad-users-backend-production.up.railway.app/usuarios")
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error("Erro ao buscar usuários:", error))
@@ -27,7 +27,7 @@ function App() {
 
     const novoUsuario = { name, email, age } 
 
-    const response = await fetch("https://cad-users-backend.up.railway.app/usuarios", {
+    const response = await fetch("https://cad-users-backend-production.up.railway.app/usuarios", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
